@@ -1,112 +1,67 @@
+/********************************/
+/* Foglio di stile del progetto */
+/********************************/
+
 * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-button {
-  font-family: 'Ubuntu', sans-serif;
-  background-color: rgb(143, 218, 221);
-  border-radius: 6px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
-/*
-.overlay-text{
-  font-family: 'Ubuntu', sans-serif;
-  background-color: rgba(58, 59, 59, 0.842);
-  border-radius: 6px;
-}*/
-/* The grid container */
+/* Stili del grid container e dei suoi elementi */
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header'
-    'left middle right'
-    'footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-}
-
-/*
-.grid-container{
-  display: grid;
-  grid-template-columns: 20vW 60vW 20vW;
-  grid-template-rows: 100vh
-}
-*/
-
-/* Style the header */
-.header {
-  grid-area: header;
-  background-color: #ffffff;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-}
-
-
-/* Style the left column */
-.left {
-  grid-area: left;
-}
-
-/* Style the middle column */
-.middle {
-  grid-area: middle;
-}
-
-/* Style the right column */
-.right {
-  grid-area: right;
-}
-
-/* Style the footer */
-.footer {
-  grid-area: footer;
-  background-color: #ffffff;
-  padding: 10px;
-  /*text-align: center;*/
-}
-
-table,
-td,
-th {
-  border: 1px solid black;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .grid-container {
+    display: grid;
     grid-template-areas:
-      'header header header header header'
-      'left left left left left'
-      'middle middle middle middle middle'
-      'right right right right right'
-      'footer footer footer footer footer';
-  }
+        'header header header'
+        'left middle right'
+        'footer footer footer';
 }
 
-/* lo stile di "map" deve essere mantenuto in questa maniera SEMPRE
-   al più si può solo cambiare il valore degli attributi */
+.header {
+    grid-area: header;
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.left {
+    grid-area: left;
+}
+
+.middle {
+    grid-area: middle;
+}
+
+.right {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+
+/* Layout adattivo - cambia con la dimensione dello schermo */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+            'header header header header header'
+            'left left left left left'
+            'middle middle middle middle middle'
+            'right right right right right'
+            'footer footer footer footer footer';
+    }
+}
+
+/* Stile elemento "map" */
 .map {
-  height: 80vh;
-  width: 66vw;
-  /*text-align: center;*/
+    height: 100vh;
+    width: 66vw;
 }
 
-/* Feature Overlay */
-/* Pop-up coordinate punto scelto dall'utente */
+/* Stile del puntatore popup */
 .overlay-container {
     height: 10px;
     width: 10px;
@@ -115,54 +70,39 @@ table {
     background-color: rgb(0,0,0);
     opacity: 1;
 }
-/*
-.overlay-container #feature-info::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px;
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-}*/
 
-
+/* Stili dei pulsanti "azione" */
 #select_feature {
-  position: relative;
-  z-index: 500;
-  top: 1%;
-  /*left: 20px;*/
-
+    position: relative;
+    z-index: 500;
+    top: 1%;
 }
 
 #modify_feature {
-  position: relative;
-  z-index: 500;
-  top: 1%;
-  /*left: 20px;*/
+    position: relative;
+    z-index: 500;
+    top: 1%;
 }
 
 #login {
-  position: relative;
-  z-index: 500;
-  top: 1%;
-  /*left: 20px;*/
+    position: relative;
+    z-index: 500;
+    top: 1%;
 }
 
 
 #toggle_editing {
-  position: relative;
-  z-index: 500;
-  top: 1%;
-  /*left: 20px;*/
+    position: relative;
+    z-index: 500;
+    top: 1%;
 }
 
 #get_info {
-  position: relative;
-  z-index: 500;
-  top: 1%;
-  /*left: 20px;*/
+    position: relative;
+    z-index: 500;
+    top: 1%;
 }
 
-/**/
+button {
+    border-radius: 6px;
+}
